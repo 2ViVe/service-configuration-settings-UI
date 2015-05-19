@@ -1,0 +1,23 @@
+<div class="panel-group" id="config-list" role="tablist" aria-multiselectable="true">
+  <% data.forEach(function(category, cindex){ %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading<%= cindex%>">
+        <h6 class="panel-title">
+          <a data-toggle="collapse" data-parent="#config-list" href="#collapse<%= cindex%>" aria-expanded="<% if(cindex === 0){ %> true <% } else { %> false <% } %>" aria-controls="collapse<%= cindex%>" class="<% if(cindex !== 0){ %> collapsed <% } %>">
+            <%= category.name %>
+          </a>
+        </h6>
+      </div>
+      <div id="collapse<%= cindex%>" class="panel-collapse <% if(cindex === 0) {%> collapse in <% } else { %> collapse <% } %>"aria-expanded="<% if(cindex === 0) {%> true <% } else { %> false <% } %>" role="tabpanel" aria-labelledby="heading<%= cindex%>">
+        <div class="panel-body">
+         <ul class="nav nav-sidebar">
+            <% category.services.forEach( function(service, index){ %>
+              <li category='<%= category.name%>' <% if(index === 0 && cindex === 0){ %> class='active' <% } %> ><a onclick='return false;' style="cursor: pointer;"><%= service.name %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+
+</div>

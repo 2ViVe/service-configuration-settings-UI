@@ -1,0 +1,22 @@
+<div class="panel panel-info">
+  <div class="panel-heading"><%= category%>(<%=workMode%>)</div>
+  <div class="panel-body">
+      <form id="editSettingForm">
+        <div class="form-group">
+          <label for="modal-name" class="control-label">name:</label>
+          <input type="text" class="form-control" name='modal-name' id="modal-name" value="<%=name%>" <%=disabled%>/>
+        </div>
+        <div class="form-group">
+          <label for="modal-ip" class="control-label">ip:</label>
+          <input type="text" class="form-control" name='modal-ip' id="modal-ip" value="<%=ip%>" />
+        </div>
+        <div class="form-group">
+          <label for="modal-port" class="control-label">port:</label>
+          <input type="text" class="form-control" name='modal-port' id="modal-port" value="<%=port%>" />
+        </div>
+        <button id='btnBack' type="button" class="btn btn-default">Back</button>
+        <button id='btnSubmit' type="button" class="btn btn-primary">Submit</button>
+      </form>
+    </div>  
+  </div>
+</div>

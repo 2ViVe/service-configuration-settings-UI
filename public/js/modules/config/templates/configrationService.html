@@ -1,0 +1,19 @@
+<h2 class="sub-header"><%=sectionName%> <button id='btnAdd' type="button" class="btn btn-primary btn-sm pull-right">Add</button></h2>
+<div class="table-responsive">
+  <table id="listTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>company name</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+      <% data.forEach(function(item) { %>
+        <tr>
+          <td><%= item['companyName'] %></td>
+          <td><button type="button" class="btn btn-link btn-xs">Edit</button>&nbsp;<button type="button" class="btn btn-link btn-xs">Delete</button></td>
+        </tr>
+      <% }) %>
+    <tbody>
+    </tbody>
+  </table>
+</div>

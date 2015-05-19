@@ -1,0 +1,24 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="exampleModalLabel"><%= title%></h4>
+    </div>
+    <div class="modal-body">
+<!--
+        <div class="form-group">
+          <label for="recipient-name" class="control-label">Recipient:</label>
+          <input type="text" class="form-control" id="recipient-name">
+        </div>
+        <div class="form-group">
+          <label for="message-text" class="control-label">Message:</label>
+          <textarea class="form-control" id="message-text"></textarea>
+        </div>
+      
+ --></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default <%=hideClose%>" data-dismiss="modal"><%= closeName %></button>
+      <button id="modal-submit" type="button" class="btn btn-primary <%=hideSubmit%>"><%= submitName %></button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+    "name": "configuration_setting",
+    "script": "./index.js",
+    "instances": "1",
+    "exec_mode": "cluster_mode",
+    "merge_logs" : "true",
+    "run_as_user" : "ogrunner",
+    "error_file": "/var/log/configuration_setting/configuration_setting-err.log",
+    "out_file": "/var/log/configuration_setting/configuration_setting-out.log",
+    "env": {
+        "NODE_ENV": "development"
+    }
+}

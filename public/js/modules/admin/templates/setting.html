@@ -1,0 +1,43 @@
+<form id="selectForm" class="form-inline">
+  <div class="form-group">
+    <label for="ddlCategory" class="control-label col-sm-5">categories:</label>
+    <div id='ddlCategory' class="dropdown col-sm-7">
+      <button class="btn btn-default dropdown-toggle btn-sm" type="button" id="ddlCategory" data-toggle="dropdown" aria-expanded="true">
+        categories
+        <span class="caret"></span>
+      </button>
+      <ul id="ulCategoriesList" class="dropdown-menu" role="menu" aria-labelledby="ddlCategory">
+        <% data.categories.forEach(function(category) { %>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="" onclick='return false;'><%=category%></a></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</form>
+<br/>
+<div id='settingList' class="panel panel-info">
+  <div class="panel-heading"><%= data.category%> <button id='btnAdd' class='btn btn-primary btn-xs pull-right'>Add</button></div>
+  <div class="panel-body">
+    <table id="listTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>host</th>
+          <th>port</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thread>
+        <% data.services.forEach(function(service) { %>
+          <tr>
+              <td><%= service.name %></td>
+              <td><%= service.ip %></td>
+              <td><%= service.port %></td>
+              <td><button type="button" class="btn btn-link btn-xs">Edit</button>&nbsp;<button type="button" class="btn btn-link btn-xs">Delete</button></td>
+            </tr>
+        <% }) %>
+    </table>
+  </div>
+</div>
+<br/>
+<div id="settingEdit">
+</div>

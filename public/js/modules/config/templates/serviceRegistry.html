@@ -1,0 +1,28 @@
+
+<h2 class="sub-header"><%=sectionName%> <button id='btnAdd' type="button" class="btn btn-primary btn-sm pull-right">Add</button></h2>
+<div class="table-responsive">
+  <table id="listTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>host</th>
+        <th>port</th>
+        <th>api-uri</th>
+        <th>status-uri</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+      <% data.forEach(function(item) { %>
+        <tr>
+          <td><%= item['name'] %></td>
+          <td><%= item['host'] %></td>
+          <td><%= item['port'] %></td>
+          <td><%= item['api-uri'] %></td>
+          <td><%= item['status-uri'] %></td>
+          <td><button type="button" class="btn btn-link btn-xs">Edit</button>&nbsp;<button type="button" class="btn btn-link btn-xs">Delete</button></td>
+        </tr>
+      <% }) %>
+    <tbody>
+    </tbody>
+  </table>
+</div>
