@@ -3,8 +3,9 @@ define([
   'backbone',
   'underscore',
   'router',
-  'models/request'
-], function ($, Backbone, _, Router, Model) {
+  'models/request',
+  'lib/viewHelper'
+], function ($, Backbone, _, Router, Model, viewHelper) {
   var showView = Backbone.View.extend({
 
     initialize: function () {
@@ -12,11 +13,6 @@ define([
       self.views = [];
       self.currentView = null;
       self.render();
-      // self.listenTo(self.loginOutModel,"read",self.afterLoginOut);
-      // self.delegateEvents({
-      //   "click #ulTabMenu a": "clickShowTabMenu",
-      //   "click #ulTabMenu a button": "closeView"
-      // });
     },
 
     closeView:function(e){
@@ -36,6 +32,7 @@ define([
                 self.currentView.close();
                 self.currentView = null;
             }
+            viewHelper.loading($(el));
             if(view) {
                 self.currentView = new view({el: el});
             }

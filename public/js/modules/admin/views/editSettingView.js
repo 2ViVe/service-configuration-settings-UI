@@ -21,6 +21,7 @@ define([
             }
 
             self.interfaceShow();
+            base.viewHelper.loading(self.$el);
         },
 
         registEvents: function() {

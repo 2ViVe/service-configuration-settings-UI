@@ -18,6 +18,7 @@ define([
             } else{
                 self.listenTo(self.requsetModel, 'post', self.afterEdit);
             }
+            base.viewHelper.loading(self.$el);
         },
 
         getData: function() {

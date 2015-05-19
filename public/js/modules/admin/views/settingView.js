@@ -10,6 +10,7 @@ define([
             var self = this;
             self.models = [];
             self.category = '';
+            base.viewHelper.loading(self.$el);
         },
 
         preRender: function() {

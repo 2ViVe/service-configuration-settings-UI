@@ -19,6 +19,7 @@ define([
             self.models.push(self.requestModel);
             self.requestModel.fetch("/config/category");
             self.events();
+            base.viewHelper.loading(self.$el);
         },
 
         events : function () {

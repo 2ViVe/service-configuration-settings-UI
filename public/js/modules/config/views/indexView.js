@@ -15,6 +15,7 @@ define([
             var self = this;
             self.views = [];
             self.render();
+            base.viewHelper.loading(self.$el);
         },
 
         events: function() {

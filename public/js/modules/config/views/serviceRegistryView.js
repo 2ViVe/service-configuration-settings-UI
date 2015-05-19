@@ -13,6 +13,7 @@ define([
             self.views = [];
             self.query();
             self.events();
+            base.lib.viewHelper.loading(self.$el);
         },
 
         events: function() {
