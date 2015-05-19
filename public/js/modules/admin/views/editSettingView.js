@@ -20,8 +20,8 @@ define([
                 self.listenTo(self.requsetModel, 'post', self.afterEdit);
             }
 
+            base.lib.viewHelper.loading(self.$el);
             self.interfaceShow();
-            base.viewHelper.loading(self.$el);
         },
 
         registEvents: function() {
