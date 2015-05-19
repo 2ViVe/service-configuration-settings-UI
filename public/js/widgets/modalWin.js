@@ -13,6 +13,7 @@ define([
             self.childView.parent = self;
             self.setting = self.options.setting || {};
             self.views.push(self.childView);
+            base.lib.viewHelper.loading(self.$el);
         },
 
         events: function() {
